@@ -6,4 +6,5 @@ db.sqlite3
 *.py[cod]
 *.swp
 *~
+.env
 env/

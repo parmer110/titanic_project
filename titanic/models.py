@@ -12,7 +12,7 @@ class TitanicPassenger(models.Model):
     ticket = models.CharField(max_length=20)
     fare = models.FloatField()
     cabin = models.CharField(max_length=20, null=True, blank=True)
-    embarked = models.CharField(max_length=1)
+    embarked = models.CharField(max_length=10)
 
     def __str__(self):
         return f'{self.name} ({self.passenger_id})'

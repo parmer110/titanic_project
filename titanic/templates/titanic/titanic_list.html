@@ -1,0 +1,12 @@
+<h1>Titanic Passengers</h1>
+<a href="{% url 'upload_file' %}">Upload Data</a>
+<a href="{% url 'titanic_create' %}">Create New Passenger</a>
+<ul>
+    {% for passenger in passengers %}
+        <li>
+            <a href="{% url 'titanic_detail' passenger.passenger_id %}">{{ passenger.name }}</a>
+            <a href="{% url 'titanic_update' passenger.passenger_id %}">Edit</a>
+            <a href="{% url 'titanic_delete' passenger.passenger_id %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>

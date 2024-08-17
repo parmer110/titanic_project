@@ -1,0 +1,15 @@
+<h1>{{ passenger.name }}</h1>
+<p>Passenger ID: {{ passenger.passenger_id }}</p>
+<p>Survived: {{ passenger.survived }}</p>
+<p>Class: {{ passenger.pclass }}</p>
+<p>Sex: {{ passenger.sex }}</p>
+<p>Age: {{ passenger.age }}</p>
+<p>Number of Siblings/Spouses Aboard: {{ passenger.sibsp }}</p>
+<p>Number of Parents/Children Aboard: {{ passenger.parch }}</p>
+<p>Ticket: {{ passenger.ticket }}</p>
+<p>Fare: {{ passenger.fare }}</p>
+<p>Cabin: {{ passenger.cabin }}</p>
+<p>Embarked: {{ passenger.embarked }}</p>
+<a href="{% url 'titanic_update' passenger.passenger_id %}">Edit</a>
+<a href="{% url 'titanic_delete' passenger.passenger_id %}">Delete</a>
+<a href="{% url 'titanic_list' %}">Back to list</a>

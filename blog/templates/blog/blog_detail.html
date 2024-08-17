@@ -1,0 +1,6 @@
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<img src="{{ post.image.url }}" alt="{{ post.title }}">
+<a href="{% url 'post_update' post.id %}">Edit</a>
+<a href="{% url 'post_delete' post.id %}">Delete</a>
+<a href="{% url 'post_list' %}">Back to list</a>
